@@ -1,24 +1,20 @@
 import React from "react";
-import ContainerSuperior from "../ContainerSuperior/ContainerSuperior";
+import MenuHorizontal from '../MenuHorizontal/MenuHorizontal';
 import AreaDados from "../AreaDados/AreaDados";
 import Rodape from "../Rodape/Rodape";
-import MenuBotoes from "../MenuBotoes/MenuBotoes.js";
+import '../Styles/Styles.css'
+import Cabecalho from '../Cabecalho/Cabecalho';
 
-const divStyle = {
-  height: '100%',
-  border: '1px ridge gray',
-  backgroundColor: 'darkred'
-}
+
 export default function ContainerGeral() {
-  return (
-    <>
-      <div 
-      style={divStyle}>
-        <ContainerSuperior />
-        <MenuBotoes />
-        <AreaDados />
-        <Rodape />
-      </div>
-    </>
-  )
+	return (
+		<>
+			<div className="container-geral">
+				<Cabecalho/>
+				<MenuHorizontal />
+				<AreaDados />
+				<Rodape />
+			</div>
+		</>
+	)
 }
